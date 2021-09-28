@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="home" lang="en">
+	<head>
+	 	<title>Logger</title>
+	 	<link rel="stylesheet" type="text/css" href="style.css">
+	 	<link rel="stylesheet" type="text/css" href="normalize.css">
+	</head>
+	<body class="layout-default">
+		<header>
+			<div class="container">
+				<div class="header-section logo-section">
+					<div class="logo">
+					 	<a href="file:///C:/Users/HP/Desktop/Logger/index.html" title="Logger">Logger</a>
+					</div>
+					<div class="header-group">
+						<h1>Logger</h1>
+						<h2>
+							Beautiful logs without making a mess. Organize your logs by class names,
+
+						</h2>
+						<h2> hide the logs you won't need and send the important data to specific log files.</h2>
+					</div>
+
+				</div>
+				<div class="header-section">
+					<a href="https://github.com/MysticalDragon98/-mysticaldragon-logger" class="btn">Documentation</a>
+				</div>
+			</div>
+			
+		</header>
+		<div class="container main">
+			<section>
+				<h2><span class="h3">Installation</span></h2>
+				<div class="highlight shell">
+					<p class="parr"><span class="cal">#Using npm</span>:</p>
+					<pre><div>npm i <span class="myst">@mysticaldragon/logger</span></div></pre>
+					<p class="parr"><span class="cal">#Using yarn</span>:</p>
+					<pre><div>yarn add <span class="myst">@mysticaldragon/logger</span></div></pre>
+				</div>
+				<h2><span class="h3">Package</span><a href="https://www.npmjs.com/package/@mysticaldragon/logger" class="npm">Click here</a></h2>
+				<h2><span class="h3">Repositories</span><a href="https://github.com/MysticalDragon98/-mysticaldragon-logger" class="git">Click here</a></h2>
+			</section>
+			<section>
+				<h2><span class="h3">Why Logger?</span></h2>
+				<p class="parra"><span class="h3">Because we have beautiful logs with timestamp and classes, pipe logs to files based on classes</span></p>
+				<div class="highlight first">
+					<pre>
+						<div><span class="tic">const</span>{ log } = <span class="new">require</span><span class="myst">('@mysticaldragon/logger');</span></div>
+						<div><span class="cal">log</span>(<span class="tic">"MAIN"</span>, <span class="myst">"Hello world!"</span>);
+							<div>
+<span class="myst">[Thu, 26aug 2021 22:41:33]</span> <span class="tic">| MAIN |</span> Hello World!</div></div>
+						
+					</pre>
+				</div>
+			</section>
+			<section>
+				<h2><span class="h3">Show, hide and pipe logs to files based on filters</span></h2>
+				<div class="highlight second">
+					<pre>
+						<p><span class="tic">const</span> <span class="drag">Logger</span> = <span class="new">require</span>('<span class="myst">@mysticaldragon/logger</span>');
+<span class="tic">const</span> { log } = <span class="drag">new Logger</span>({
+	<span class="gon">enabled</span>: boolean, <span class="cal">// Is logging activated? (Default, true)</span>
+	<span class="gon">hidden</span>: [{ <span class="gon">class</span>: "HIDDEN_LOG" }]<span class="cal"> // Hide logs based on class, Wwildcard: * (Default, [])</span>
+	pipe: [{ <span class="cal">// Store logs in file</span>
+		<span class="gon">path</span>: "logs/main.log", <span class="cal">// File to write</span>
+		<span class="gon">filter</span>: { <span class="gon">class</span>: "MAIN" }
+	}]
+})
+
+<span class="drag">Logger</span>.<span class="new">log</span><span class="myst">("HIDDEN_LOG", "This message won't be shown.");</span>
+<span class="drag">Logger</span>.<span class="new">log</span><span class="myst">("MAIN", "This log will be written at logs/main.log.");</span></p>
+					</pre>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<div class="container">
+				<p>Contact me on 
+					<a href="https://github.com/MysticalDragon98">Github</a>
+					and for more of my works on <a href="https://www.npmjs.com/~mysticaldragon98">npm</a></p>
+			</div>
+		</footer>
+	</body>
+</html>
